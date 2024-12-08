@@ -87,7 +87,7 @@ primary key (pw_name ) "
 #endif
 #endif
 
-#define RELAY_TABLE_LAYOUT "ip_addr char(18) not null, \
+#define RELAY_TABLE_LAYOUT "ip_addr varchar(39) not null, \
 timestamp char(12), primary key (ip_addr)"
 
 #define LASTAUTH_TABLE_LAYOUT \
@@ -225,7 +225,7 @@ where pw_name = \"%s\" "
 #endif
 
 #ifdef IP_ALIAS_DOMAINS
-#define IP_ALIAS_TABLE_LAYOUT "ip_addr char(18) not null, domain char(96),  primary key(ip_addr)"
+#define IP_ALIAS_TABLE_LAYOUT "ip_addr varchar(39) not null, domain char(96),  primary key(ip_addr)"
 #endif
 
 #define DIR_CONTROL_TABLE_LAYOUT "domain char(96) not null, cur_users int, \
